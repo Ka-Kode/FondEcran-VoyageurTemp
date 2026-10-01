@@ -1,0 +1,155 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/background.gd" id="2"]
+[ext_resource type="Script" path="res://scripts/cockpit.gd" id="3"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1")
+
+[node name="Camera" type="Camera2D" parent="."]
+
+[node name="Background" type="CanvasLayer" parent="."]
+layer = -10
+
+[node name="Sky" type="Node2D" parent="Background"]
+script = ExtResource("2")
+
+[node name="CockpitLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Cockpit" type="Control" parent="CockpitLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 900.0
+offset_bottom = 600.0
+mouse_filter = 2
+script = ExtResource("3")
+
+[node name="UI" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="HintLabel" type="Label" parent="UI"]
+offset_left = 12.0
+offset_top = 8.0
+offset_right = 700.0
+offset_bottom = 32.0
+text = "Choisis l'heure a laquelle tu comptes finir ta journee."
+theme_override_colors/font_color = Color(1, 1, 1, 0.85)
+theme_override_font_sizes/font_size = 14
+
+[node name="ThemeOption" type="OptionButton" parent="UI"]
+offset_left = 12.0
+offset_top = 560.0
+offset_right = 212.0
+offset_bottom = 590.0
+
+[node name="CockpitThemeOption" type="OptionButton" parent="UI"]
+offset_left = 220.0
+offset_top = 560.0
+offset_right = 420.0
+offset_bottom = 590.0
+
+[node name="CockpitButton" type="Button" parent="UI"]
+visible = false
+offset_left = 750.0
+offset_top = 8.0
+offset_right = 890.0
+offset_bottom = 36.0
+text = "Cockpit (Tab)"
+
+
+[node name="StatsLabel" type="Label" parent="UI"]
+offset_left = 12.0
+offset_top = 36.0
+offset_right = 740.0
+offset_bottom = 90.0
+text = ""
+theme_override_colors/font_color = Color(1, 1, 1, 0.7)
+theme_override_font_sizes/font_size = 13
+
+[node name="ViewButton" type="Button" parent="UI"]
+visible = false
+offset_left = 750.0
+offset_top = 40.0
+offset_right = 890.0
+offset_bottom = 68.0
+text = "Vue d'ensemble"
+
+[node name="ControlsLabel" type="Label" parent="UI"]
+modulate = Color(1, 1, 1, 0.5)
+offset_left = 600.0
+offset_top = 572.0
+offset_right = 890.0
+offset_bottom = 592.0
+horizontal_alignment = 2
+text = "Molette : zoom - Glisser : deplacer - R : recentrer"
+theme_override_font_sizes/font_size = 11
+
+[node name="TimePanel" type="PanelContainer" parent="UI"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="UI/TimePanel"]
+theme_override_constants/separation = 12
+
+[node name="Label" type="Label" parent="UI/TimePanel/VBox"]
+text = "A quelle heure comptes-tu finir ?"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 18
+
+[node name="TimeRow" type="HBoxContainer" parent="UI/TimePanel/VBox"]
+alignment = 1
+theme_override_constants/separation = 6
+
+[node name="HourSpin" type="SpinBox" parent="UI/TimePanel/VBox/TimeRow"]
+custom_minimum_size = Vector2(70, 0)
+max_value = 23.0
+value = 18.0
+
+[node name="Sep" type="Label" parent="UI/TimePanel/VBox/TimeRow"]
+text = ":"
+
+[node name="MinuteSpin" type="SpinBox" parent="UI/TimePanel/VBox/TimeRow"]
+custom_minimum_size = Vector2(70, 0)
+max_value = 59.0
+step = 5.0
+value = 0.0
+
+[node name="ValidateButton" type="Button" parent="UI/TimePanel/VBox"]
+text = "Valider"
+
+[node name="StartButton" type="Button" parent="UI"]
+visible = false
+offset_left = 430.0
+offset_top = 556.0
+offset_right = 610.0
+offset_bottom = 590.0
+text = "Démarrer le voyage"
+
+
+[node name="ArrivalPanel" type="PanelContainer" parent="UI"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="UI/ArrivalPanel"]
+theme_override_constants/separation = 10
+
+[node name="SummaryLabel" type="Label" parent="UI/ArrivalPanel/VBox"]
+text = "Arrive !"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 20
+
+[node name="NewTripButton" type="Button" parent="UI/ArrivalPanel/VBox"]
+text = "Nouveau voyage"

@@ -1,0 +1,18 @@
+# Cache de l'éditeur Godot (régénéré automatiquement)
+.godot/
+
+# Builds exportés : ils vont dans les Releases GitHub, pas dans le dépôt
+*.exe
+*.pck
+*.zip
+builds/
+
+# Notes de travail internes (gardées en local, pas publiées)
+CONCEPTION.md
+HISTORIQUE.md
+AMELIORATIONS.md
+
+# Fichiers système
+Thumbs.db
+desktop.ini
+.DS_Store

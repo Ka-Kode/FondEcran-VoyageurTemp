@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <radialGradient id="planet" cx="38%" cy="35%" r="70%">
+      <stop offset="0" stop-color="#7ff3ff"/>
+      <stop offset="0.55" stop-color="#2a7fd6"/>
+      <stop offset="1" stop-color="#1a1f5c"/>
+    </radialGradient>
+  </defs>
+  <rect width="256" height="256" rx="48" fill="#0b0d1f"/>
+  <circle cx="44" cy="52" r="3" fill="#fff" opacity="0.8"/>
+  <circle cx="210" cy="40" r="2.5" fill="#fff" opacity="0.7"/>
+  <circle cx="220" cy="200" r="3" fill="#fff" opacity="0.6"/>
+  <circle cx="36" cy="196" r="2" fill="#fff" opacity="0.7"/>
+  <circle cx="128" cy="138" r="70" fill="url(#planet)"/>
+  <ellipse cx="128" cy="138" rx="112" ry="26" fill="none" stroke="#ff4fd8" stroke-width="8" transform="rotate(-18 128 138)" opacity="0.9"/>
+  <path d="M188 52 l26 -10 -10 26 -6 -10 z" fill="#ffd34f"/>
+</svg>

@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="AppTheme" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/app_theme.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+display_name = "Defaut"
+background = Color(0.06, 0.06, 0.09, 1)
+background_style = "flat"
+grid_color = Color(1, 1, 1, 0.05)
+text_color = Color(1, 1, 1, 0.85)
+ship_color = Color(0.85, 0.87, 0.9, 1)
+ship_adrift_color = Color(0.95, 0.3, 0.35, 1)
+planet_start = Color(0.6, 0.6, 0.65, 1)
+planet_dest = Color(0.9, 0.75, 0.3, 1)
+planet_candidate = Color(0.35, 0.4, 0.5, 1)
+planet_candidate_dim = Color(0.3, 0.32, 0.38, 0.4)
+planet_selected = Color(0.4, 0.75, 0.9, 1)
+route_line = Color(0.5, 0.5, 0.55, 0.5)
+capture_ring = Color(0.4, 0.85, 0.6, 0.5)
+emergency_marker = Color(0.9, 0.4, 0.3, 1)
+flash_color = Color(1, 1, 1, 1)
+planned_route_color = Color(1.0, 0.15, 0.15, 0.95)
+drift_line_color = Color(1.0, 0.65, 0.15, 0.85)
+correction_line_color = Color(0.4, 0.85, 1.0, 0.85)
