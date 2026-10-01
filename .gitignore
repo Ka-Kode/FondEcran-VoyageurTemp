@@ -6,6 +6,7 @@
 *.pck
 *.zip
 builds/
+tools/
 
 # Notes de travail internes (gardées en local, pas publiées)
 CONCEPTION.md
